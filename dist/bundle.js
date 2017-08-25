@@ -73,16 +73,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_fundebug_javascript__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_fundebug_javascript___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_fundebug_javascript__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__print_js__ = __webpack_require__(5);
 /*global document*/
 
 
 
 __WEBPACK_IMPORTED_MODULE_1_fundebug_javascript___default.a.apikey = "3cf3b58896cde530559232dac62ede3898cd015f6d8ac0f3eb8f792346c27983";
 
+
+
 function component()
 {
     var element = document.createElement('div');
+    var btn = document.createElement('button');
+
     element.innerHTML = __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.join(['Hello', 'webpack'], ' ');
+
+    btn.innerHTML = 'Click me and check the console!';
+    btn.onclick = __WEBPACK_IMPORTED_MODULE_2__print_js__["a" /* default */];
+
+    element.appendChild(btn);
     return element;
 }
 
@@ -17244,6 +17254,16 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;!function(e){f
 				(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
 				__WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)):P&&(module.exports=T)}(window);
+
+/***/ }),
+/* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = printMe;
+function printMe() {
+  cosnole.log('I get called from print.js!');
+}
 
 /***/ })
 /******/ ]);
